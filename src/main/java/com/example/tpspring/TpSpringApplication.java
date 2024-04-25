@@ -105,7 +105,7 @@ public class TpSpringApplication {
                 medecin.setSpecialite(Math.random()>0.5?"Cardio":"Dentist");
                 hospitalService.saveMedecin(medecin);
             });
-            Patient patient= patientRepository.findById(1L).orElse(null);
+            Patient patient= patientRepository.findById(46L).orElse(null);
             Patient patient1= patientRepository.findByNom("hassan");
             Medecin medecin= medecinReposetory.findByNom("malak");
 
@@ -116,7 +116,7 @@ public class TpSpringApplication {
             rendezVous.setPatient(patient);
             hospitalService.saveRDV(rendezVous);
 
-            RendezVous rendezVous1=rondezVousRepository.findById(1L).orElse(null);
+            RendezVous rendezVous1=rondezVousRepository.findById(7L).orElse(null);
 
             Consultation consultation = new Consultation();
             consultation.setDateConsultation(new Date());
